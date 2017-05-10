@@ -1,0 +1,89 @@
+
+@mixin font-logo {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: 5rem;
+  text-transform: uppercase;
+  color: $blue;
+}
+
+.site-header {
+  &>* {
+    padding: $padding;
+    align-self: center;
+  }
+  &>.fa{
+    position: relative;
+    padding-left: $padding*2;
+
+    &:before {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translate(0, -50%);
+      font-size: 2em;
+      color: $blue;
+    }
+    .textwidget {
+      @include font-regular;
+    }
+  }
+  .textwidget {
+    font-size: 1.4rem;
+  }
+}
+
+.site-branding {
+  padding-top: 0;
+  padding-bottom: 0;
+
+  h1.site-title {
+    @include font-logo;
+    padding-bottom: 0.05em;
+  }
+}
+
+#site-navigation {
+  padding: 0 $padding;
+
+  li {
+    position: relative;
+
+    a {
+      position: relative;
+      display: block;
+      padding: 1em 1.5em;
+      color: transparentize(white, 0.2);
+      z-index: 11;
+    }
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 0;
+      transition: height 100ms ease-out;
+      background-color: $blue-dark;
+      z-index: 10;
+    }
+    &.current-menu-item {
+      &:after {
+        height: 100%;
+      }
+      a {
+        color: white;
+        cursor: default;
+      }
+    }
+    &:hover {
+      a {
+        color: white;
+      }
+      &:after {
+        height: 100%;
+      }
+    }
+  }
+}
