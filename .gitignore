@@ -4,11 +4,18 @@ wp-content/advanced-cache.php
 wp-content/backup-db/
 wp-content/backups/
 wp-content/blogs.dir/
+wp-content/index.php
 wp-content/cache/
 wp-content/upgrade/
 wp-content/uploads/
 wp-content/wp-cache-config.php
 wp-content/plugins/hello.php
+wp-content/plugins/
+wp-content/themes/index.php
+wp-content/themes/twentyseventeen/
+/*.php
+wp-includes/
+wp-admin/
 
 /.htaccess
 /license.txt
@@ -17,4 +24,3 @@ wp-content/plugins/hello.php
 /sitemap.xml.gz
 
 .idea
-
