@@ -1,0 +1,58 @@
+article {
+  .entry-content {
+    margin-top: 0;
+
+    h1, h2, h3 {
+      margin-top: 1em;
+      margin-bottom: 0.5em;
+    }
+  }
+  .entry-title {
+    text-transform: uppercase;
+    margin-bottom: 1em;
+  }
+  ol > li > strong {
+    display: block;
+    margin: 0.5em 0;
+  }
+}
+
+.at-table {
+  background-color: #F8F8F8;
+
+  &, tr, th, td {
+    border: 1px solid $grey-light;
+  }
+  &>thead {
+    &>tr {
+      &>th {
+        vertical-align: top;
+      }
+    }
+  }
+  &>tbody {
+    &>tr {
+      &>td {
+        vertical-align: middle;
+      }
+    }
+  }
+  tr.info {
+    background-color: $blue-xlight;
+  }
+  tr.at-prices {
+    td:not(:first-child) {
+      @include font-bold;
+      color: $blue;
+    }
+  }
+  tr.at-prices-big {
+    td:not(:first-child) {
+      @include font-bold;
+      color: $blue;
+      font-size: 1.2em;
+    }
+  }
+}
+
+

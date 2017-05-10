@@ -2,9 +2,11 @@
 $blue: #3099C2;
 $blue-light: lighten($blue, 5%);
 $blue-lighter: lighten($blue, 10%);
+$blue-xlight: lighten($blue, 40%);
 $blue-dark: darken($blue, 5%);
 $blue-darker: darken($blue, 10%);
 $black: #333344;
+$grey-light: #CCCCCC;
 $grey-xlight: #EEEEEE;
 
 $padding: 2rem;
@@ -33,14 +35,23 @@ a:hover {
   color: darken($blue, 10%);
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3 {
   margin: 0;
   padding: 0;
   color: $blue;
+  font-size: 2rem;
 
   .fa {
     margin-right: 0.5em;
   }
+}
+h1 {
+  font-size: 2.4rem;
+  color: $blue-darker;
+}
+h2 {
+  font-size: 2.2rem;
+  color: $blue-dark;
 }
 
 .bg-white {
@@ -50,7 +61,7 @@ h1, h2, h3, h4, h5 {
   background-color: $blue;
   color: white;
 
-  a, h1, h2, h3, h4, h5 {
+  a, h1, h2, h3 {
     color: white;
   }
 }
@@ -71,6 +82,6 @@ ul.hul {
 
 .site-content {
   padding: $padding;
-  max-width: 960px;
+  max-width: 1080px;
   margin: auto;
 }
