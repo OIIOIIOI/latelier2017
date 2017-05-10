@@ -19,6 +19,7 @@ article {
 
 .at-table {
   background-color: #F8F8F8;
+  margin: 0.5em 0;
 
   &, tr, th, td {
     border: 1px solid $grey-light;
@@ -46,12 +47,21 @@ article {
       color: $blue;
     }
   }
+  td.at-price {
+    @include font-bold;
+    color: $blue;
+  }
   tr.at-prices-big {
     td:not(:first-child) {
       @include font-bold;
       color: $blue;
       font-size: 1.2em;
     }
+  }
+  td.at-price-big {
+    @include font-bold;
+    color: $blue;
+    font-size: 1.2em;
   }
 }
 

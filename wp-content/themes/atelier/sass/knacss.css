@@ -2252,7 +2252,8 @@ article ol > li > strong {
   margin: 0.5em 0; }
 
 .at-table {
-  background-color: #F8F8F8; }
+  background-color: #F8F8F8;
+  margin: 0.5em 0; }
   .at-table, .at-table tr, .at-table th, .at-table td {
     border: 1px solid #CCCCCC; }
   .at-table > thead > tr > th {
@@ -2265,7 +2266,16 @@ article ol > li > strong {
     font-family: "Roboto", sans-serif;
     font-weight: 700;
     color: #3099C2; }
+  .at-table td.at-price {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    color: #3099C2; }
   .at-table tr.at-prices-big td:not(:first-child) {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    color: #3099C2;
+    font-size: 1.2em; }
+  .at-table td.at-price-big {
     font-family: "Roboto", sans-serif;
     font-weight: 700;
     color: #3099C2;
