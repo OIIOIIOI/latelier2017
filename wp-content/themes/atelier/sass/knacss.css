@@ -2436,7 +2436,7 @@ article ol > li > strong {
     #services-navigation > div > a.disabled {
       cursor: default; }
 
-.slider-post .entry-title {
+.slider-post .entry-header .entry-title {
   margin: 0.5em 0; }
 
 /*# sourceMappingURL=knacss.css.map */
