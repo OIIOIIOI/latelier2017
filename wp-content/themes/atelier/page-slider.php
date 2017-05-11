@@ -1,6 +1,7 @@
 <?php
-
-
+/*
+Template Name: Slider Page
+*/
 
 
 get_header();
@@ -11,7 +12,13 @@ get_header();
 
             <?php while (have_posts()) : the_post(); ?>
 
-                <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                <article id="post-<?php the_ID(); ?>" <?php post_class('slider-post'); ?>>
+
+                    <?php
+                    $shortcode = get_post_meta(get_the_ID(), 'shortcode', true);
+                    if ($shortcode != '')
+                        echo do_shortcode($shortcode);
+                    ?>
 
                     <header class="entry-header">
                         <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>

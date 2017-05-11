@@ -12,7 +12,7 @@
     padding: $padding;
     align-self: center;
   }
-  &>.fa{
+  &>.fa {
     position: relative;
     padding-left: $padding*2;
 
@@ -43,47 +43,91 @@
   }
 }
 
+li.current-menu-item {
+  &>a {
+    color: white !important;
+    cursor: default !important;
+  }
+}
+
 #site-navigation {
   padding: 0 $padding;
+  box-shadow: 0 0 1rem #CCCCCC;
 
-  li {
-    position: relative;
-
-    a {
+  ul#menu-header {
+    &>li {
       position: relative;
-      display: block;
-      padding: 1em 1.5em;
-      color: transparentize(white, 0.2);
-      z-index: 11;
-    }
-    &:after {
-      content: '';
-      display: block;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 0;
-      transition: height 100ms ease-out;
-      background-color: $blue-dark;
-      z-index: 10;
-    }
-    &.current-menu-item {
-      &:after {
-        height: 100%;
-      }
+
       a {
-        color: white;
-        cursor: default;
-      }
-    }
-    &:hover {
-      a {
-        color: white;
+        position: relative;
+        display: block;
+        height: 3.5em;
+        line-height: 3.5em;
+        padding: 0 1.5em;
+        color: transparentize(white, 0.2);
+        white-space: nowrap;
+        z-index: 11;
       }
       &:after {
-        height: 100%;
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 0;
+        transition: height 100ms ease-out;
+        background-color: $blue-dark;
+        z-index: 10;
+      }
+      &.current-menu-item,
+      &.current-menu-parent {
+        &:after {
+          height: 100%;
+        }
+      }
+      &>ul.sub-menu {
+        position: absolute;
+        top: 3.5em;
+        left: 0;
+        background-color: $blue-dark;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        z-index: 21;
+
+        &>li {
+          display: block;
+          overflow: hidden;
+          height: 0;
+          transition: height 100ms, background-color 100ms;
+
+          &:hover {
+            background-color: $blue-darker;
+
+            &>a {
+              color: white;
+            }
+          }
+          &.current-menu-item {
+            background-color: $blue-darker;
+          }
+        }
+      }
+      &:hover {
+        &>a {
+          color: white;
+        }
+        &:after {
+          height: 100%;
+        }
+        &>ul.sub-menu {
+          &>li {
+            height: 3.5em;
+          }
+        }
       }
     }
   }
+
 }

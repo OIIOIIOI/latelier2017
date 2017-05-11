@@ -40,6 +40,7 @@ function atelier_setup ()
 
     register_nav_menus(array(
         'menu-header' => esc_html__('Main Menu', 'atelier'),
+        'menu-services' => esc_html__('Services Menu', 'atelier'),
     ));
 }
 endif;
@@ -60,7 +61,7 @@ function atelier_widgets_init ()
 		'name'          => esc_html__('Header Widget Area 2', 'atelier'),
         'description'   => esc_html__('Add widgets here.', 'atelier'),
         'id'            => 'header-2',
-        'before_widget' => '<div class="fa fa-phone">',
+        'before_widget' => '<div class="fa fa-clock-o">',
         'after_widget'  => '</div>',
 		'before_title'  => '',
 		'after_title'   => '',
@@ -69,7 +70,7 @@ function atelier_widgets_init ()
 		'name'          => esc_html__('Header Widget Area 3', 'atelier'),
         'description'   => esc_html__('Add widgets here.', 'atelier'),
         'id'            => 'header-3',
-        'before_widget' => '<div class="fa fa-clock-o">',
+        'before_widget' => '<div class="fa fa-phone">',
         'after_widget'  => '</div>',
 		'before_title'  => '',
 		'after_title'   => '',
@@ -86,6 +87,7 @@ function atelier_scripts ()
 }
 add_action('wp_enqueue_scripts', 'atelier_scripts');
 
+require get_template_directory().'/inc/walkers.php';
 require get_template_directory().'/inc/custom-header.php';
 require get_template_directory().'/inc/template-tags.php';
 require get_template_directory().'/inc/extras.php';

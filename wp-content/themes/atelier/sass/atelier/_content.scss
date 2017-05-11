@@ -65,4 +65,57 @@ article {
   }
 }
 
+#services-navigation {
+  &>div {
+    margin-bottom: 2rem;
+
+    &>a {
+      @include font-bold;
+      text-transform: uppercase;
+      display: block;
+      text-align: center;
+      background-color: transparentize(white, 0.2);
+
+      .service-title {
+        padding: 0.5em 1em;
+      }
+      .image-wrapper {
+        overflow: hidden;
+
+        .image-bg {
+          opacity: 0.85;
+          transition: opacity 200ms ease-in;
+        }
+      }
+      &:hover {
+        background-color: white;
+        box-shadow: 0 0 1rem #DDDDDD;
+      }
+      &:hover {
+        .image-wrapper {
+          .image-bg {
+            opacity: 1;
+          }
+        }
+      }
+      &.disabled {
+        cursor: default;
+      }
+    }
+  }
+}
+
+.slider-post {
+  .entry-title {
+    margin: 0.5em 0;
+  }
+}
+
+
+
+
+
+
+
+
 
