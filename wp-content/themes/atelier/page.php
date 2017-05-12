@@ -38,7 +38,11 @@ get_header();
 
                         foreach ($children as $child)
                         {
+                            $disabled = get_post_meta($child->ID, 'disabled', true);
+
                             $url = get_the_permalink($child->ID);
+                            if ($disabled == 'true')
+                                $url = '#';
 
                             $img_url = '';
                             if (has_post_thumbnail($child->ID))
@@ -46,7 +50,7 @@ get_header();
                             ?>
 
                             <div>
-                                <a href="<?php echo $url; ?>" class="<?php echo ($url == '#') ? 'disabled' : ''; ?>">
+                                <a href="<?php echo $url; ?>" class="<?php echo ($disabled == 'true') ? 'disabled' : ''; ?>">
                                     <div class="image-wrapper ratio-3-2">
                                         <div class="image-bg" style="background-image: url('<?php echo $img_url; ?>');"></div>
                                     </div>
