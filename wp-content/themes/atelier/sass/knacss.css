@@ -2470,28 +2470,28 @@ article ol > li > strong {
     color: #3099C2;
     font-size: 1.2em; }
 
-#services-navigation > div {
+.pages-navigation > div {
   margin-bottom: 2rem; }
-  #services-navigation > div > a {
+  .pages-navigation > div > a {
     font-family: "Roboto", sans-serif;
     font-weight: 700;
     text-transform: uppercase;
     display: block;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.8); }
-    #services-navigation > div > a .service-title {
+    .pages-navigation > div > a .service-title {
       padding: 0.5em 1em; }
-    #services-navigation > div > a .image-wrapper {
+    .pages-navigation > div > a .image-wrapper {
       overflow: hidden; }
-      #services-navigation > div > a .image-wrapper .image-bg {
+      .pages-navigation > div > a .image-wrapper .image-bg {
         opacity: 0.85;
         transition: opacity 200ms ease-in; }
-    #services-navigation > div > a:hover {
+    .pages-navigation > div > a:hover {
       background-color: white;
       box-shadow: 0 0 1rem #DDDDDD; }
-    #services-navigation > div > a:hover .image-wrapper .image-bg {
+    .pages-navigation > div > a:hover .image-wrapper .image-bg {
       opacity: 1; }
-    #services-navigation > div > a.disabled {
+    .pages-navigation > div > a.disabled {
       cursor: default; }
 
 .slider-post .entry-header .entry-title {

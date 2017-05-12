@@ -40,7 +40,6 @@ function atelier_setup ()
 
     register_nav_menus(array(
         'menu-header' => esc_html__('Main Menu', 'atelier'),
-        'menu-services' => esc_html__('Services Menu', 'atelier'),
     ));
 }
 endif;
@@ -87,7 +86,6 @@ function atelier_scripts ()
 }
 add_action('wp_enqueue_scripts', 'atelier_scripts');
 
-require get_template_directory().'/inc/walkers.php';
 require get_template_directory().'/inc/custom-header.php';
 require get_template_directory().'/inc/template-tags.php';
 require get_template_directory().'/inc/extras.php';
