@@ -21,7 +21,7 @@ get_header();
                         <?php the_content(); ?>
                     </div>
 
-                    <nav id="services-navigation" class="grid-4 has-gutter-l" role="navigation">
+                    <nav id="services-navigation" class="grid-4-medium-3-small-2 has-gutter-l" role="navigation">
                         <?php wp_nav_menu(array(
                             'theme_location' => 'menu-services',
                             'menu_id' => 'menu-services',

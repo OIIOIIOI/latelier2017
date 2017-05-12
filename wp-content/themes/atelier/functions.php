@@ -70,7 +70,7 @@ function atelier_widgets_init ()
 		'name'          => esc_html__('Header Widget Area 3', 'atelier'),
         'description'   => esc_html__('Add widgets here.', 'atelier'),
         'id'            => 'header-3',
-        'before_widget' => '<div class="fa fa-phone">',
+        'before_widget' => '<div class="fa fa-mobile">',
         'after_widget'  => '</div>',
 		'before_title'  => '',
 		'after_title'   => '',

@@ -8,24 +8,42 @@
 }
 
 .site-header {
+  max-width: 1080px;
+  margin: auto;
+
   &>* {
     padding: $padding;
     align-self: center;
   }
   &>.fa {
     position: relative;
-    padding-left: $padding*2;
+    display: block;
+    padding-left: $padding*2.5;
 
     &:before {
       position: absolute;
       top: 50%;
-      left: 0;
-      transform: translate(0, -50%);
+      left: $padding*1.25;
+      transform: translate(-50%, -50%);
       font-size: 2em;
       color: $blue;
     }
     .textwidget {
       @include font-regular;
+    }
+    @media (max-width: $tiny) {
+      padding: $padding*0.25 $padding*2;
+      text-align: center;
+
+      &:before {
+        display: none;
+      }
+      &:first-child {
+        padding-top: $padding;
+      }
+      &:last-child {
+        padding-bottom: $padding;
+      }
     }
   }
   .textwidget {
@@ -41,6 +59,14 @@
     @include font-logo;
     padding-bottom: 0.05em;
   }
+  @media (min-width: $small+1) and (max-width: $medium) {
+    width: 100%;
+  }
+  @media (max-width: $tiny) {
+    h1.site-title {
+      text-align: center;
+    }
+  }
 }
 
 li.current-menu-item {
@@ -55,6 +81,9 @@ li.current-menu-item {
   box-shadow: 0 0 1rem #CCCCCC;
 
   ul#menu-header {
+    max-width: 1080px;
+    margin: auto;
+
     &>li {
       position: relative;
 

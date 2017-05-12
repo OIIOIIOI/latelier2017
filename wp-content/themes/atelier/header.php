@@ -12,24 +12,26 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 
-	<header id="masthead" class="grid-4 bg-white site-header" role="banner">
+    <div class="bg-white">
+        <header id="masthead" class="grid-4-medium-3-small-2 site-header" role="banner">
 
-		<div class="site-branding">
-            <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-		</div>
+            <div class="site-branding">
+                <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+            </div>
 
-        <?php
-        if (is_active_sidebar('header-1'))
-            dynamic_sidebar('header-1');
+            <?php
+            if (is_active_sidebar('header-1'))
+                dynamic_sidebar('header-1');
 
-        if (is_active_sidebar('header-2'))
-            dynamic_sidebar('header-2');
+            if (is_active_sidebar('header-2'))
+                dynamic_sidebar('header-2');
 
-        if (is_active_sidebar('header-3'))
-            dynamic_sidebar('header-3');
-        ?>
+            if (is_active_sidebar('header-3'))
+                dynamic_sidebar('header-3');
+            ?>
 
-	</header>
+        </header>
+    </div>
 
     <nav id="site-navigation" class="main-navigation bg-blue" role="navigation">
         <?php wp_nav_menu(array(
